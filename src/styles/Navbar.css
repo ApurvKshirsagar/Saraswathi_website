@@ -1,0 +1,50 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  z-index: 100;
+  box-sizing: border-box;
+  padding: 0 2rem;
+}
+
+.navlinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.navlinks a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.navlinks .active {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 124, 51, 1),
+    rgba(249, 146, 69, 1)
+  );
+  border-radius: 20px;
+  color: black;
+}
+
+.navbar h2 {
+  font-size: 1.5rem;
+}
+
+.navbar-line {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+}

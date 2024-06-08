@@ -1,0 +1,38 @@
+.footer {
+  background-color: rgba(208, 102, 44, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  flex-direction: row;
+  text-align: center;
+}
+
+.footer-section {
+  flex: 1;
+}
+
+.footer h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffcc00;
+}
+
+.footer p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
