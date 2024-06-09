@@ -1,0 +1,77 @@
+.calendar{
+  background:  #f7ebda;
+  height: 100vh;
+  padding: 15px;
+}
+.event-calendar-h1, .event-calendar-h2 {
+  text-align: center;
+  margin: 10px;
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.search-group1 {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30%;
+}
+
+.search-group2 {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.search-bar {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.search-bar-month,
+.search-bar-date {
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.go-button {
+  width: 12%;
+  height: 65%;
+  /* padding: 10px */
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #d31c6e, #fab651);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.event-search-button {
+  /* width: 12%; */
+  height: 65%;
+  /* padding: 10px */
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #d31c6e, #fab651);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.event-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
