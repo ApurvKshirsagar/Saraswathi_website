@@ -12,7 +12,7 @@ const Complaint = () => {
     phoneNumber: '',
     secretary: '',
     complaint: '',
-    photo: null,
+    // photo: null,
   });
   const [selectType, setSelectType] = useState();
 
@@ -21,13 +21,45 @@ const Complaint = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleFileChange = (e) => {
-    setFormData({ ...formData, photo: e.target.files[0] });
-  };
+  // const handleFileChange = (e) => {
+  //   setFormData({ ...formData, photo: e.target.files[0] });
+  // };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    const scriptUrl = 'https://formspree.io/f/xdoqqoaq';
+
+    const postData = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      rollNumber: formData.rollNumber,
+      phoneNumber: formData.phoneNumber,
+      secretary: formData.secretary,
+      complaint: formData.complaint,
+    };
+
+    try {
+      const response = await fetch(scriptUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(postData),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log('Response:', result);
+      alert('Form submitted successfully!');
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Error submitting form');
+    }
   };
 
   return (
@@ -68,7 +100,7 @@ const Complaint = () => {
                 </div>
               </div>
               <div className='complaint-box-image'>
-                <img src={ComplaintBox} />
+                <img src={ComplaintBox} alt='Complaint Box' />
               </div>
             </div>
             <div className='roll-phone'>
@@ -106,19 +138,21 @@ const Complaint = () => {
               </label>
               <div className='horizontal-bar'>
                 <button
+                  type='button'
                   className='horizontal-bar-button'
                   onClick={() => setSelectType('Position')}
                 >
                   Position
                 </button>
                 <button
+                  type='button'
                   className='horizontal-bar-button'
                   onClick={() => setSelectType('Name')}
                 >
                   Name
                 </button>
               </div>
-              {selectType == 'Position' ? (
+              {selectType === 'Position' ? (
                 <select
                   name='secretary'
                   value={formData.secretary}
@@ -146,7 +180,7 @@ const Complaint = () => {
                 </select>
               )}
             </div>
-            <div className='complaint-form-group'>
+            {/* <div className='complaint-form-group'>
               <label className='complaint-form-label'>Add photo/video</label>
               <input
                 type='file'
@@ -155,7 +189,7 @@ const Complaint = () => {
                 onChange={handleFileChange}
                 className='complaint-form-file'
               />
-            </div>
+            </div> */}
             <div className='complaint-form-group'>
               <label className='complaint-form-label'>
                 Write your complaint
