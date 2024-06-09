@@ -1,0 +1,151 @@
+
+.complaint-form-page {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: auto;
+  background:  #f7ebda;
+}
+
+.complaint-form-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.complaint-form-container {
+  width: 65%;
+  /* max-width: 600px; */
+  /* background: #fff; */
+  border-radius: 8px;
+  padding: 20px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  text-align: center;
+}
+
+.complaint-form-title {
+  margin-bottom: 10px;
+}
+
+.complaint-form-subtitle {
+  margin-bottom: 20px;
+}
+
+.complaint-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.complaint-form-group {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.name-container{
+  /* width: 70%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.complaint-form-name-group{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.complaint-form-name-box{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.complaint-form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.complaint-form-required {
+  color: red;
+}
+
+.roll-phone{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rollno{
+  width: 45%;
+}
+.phoneno{
+  width: 45%;
+}
+
+.horizontal-bar {
+  /* display: flex; */
+  justify-content: space-between; 
+  margin-bottom: 10px; 
+}
+
+.horizontal-bar-button {
+  background-color: #ddd; 
+  color: #333;
+  border: none;
+  padding: 10px 20px; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.horizontal-bar-button:hover {
+  background-color: #bbb;
+}
+
+.complaint-form-input,
+.complaint-form-select,
+.complaint-form-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.name-container-1{
+  width: 45%;
+}
+
+.name-container-2{
+  width: 50%;
+}
+.complaint-form-textarea {
+  height: 100px;
+  resize: none;
+}
+
+.complaint-form-file {
+  padding: 10px 0;
+}
+
+.complaint-form-button {
+  width: 20%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, #D31C6E, #FAB651);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+.complaint-form-button:hover {
+  background: linear-gradient(to right, #D31C6E, #FAB651);
+  transform: scale(1.05);
+}
