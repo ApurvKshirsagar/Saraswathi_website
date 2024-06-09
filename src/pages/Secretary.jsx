@@ -1,11 +1,8 @@
-import React from 'react'
+
+import React from 'react';
 
 const Secretary = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default Secretary
+export default Secretary;

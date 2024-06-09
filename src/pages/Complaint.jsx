@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import "../styles/Complaint.css";
 import ComplaintBox from "../assets/images/complaint_box.png";
@@ -175,6 +176,3 @@ const Complaint = () => {
       </div>
     </div>
   );
-};
-
-export default Complaint;

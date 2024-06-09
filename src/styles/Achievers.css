@@ -1,0 +1,69 @@
+.achiever {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 8px 8px 4px 0px rgba(162, 153, 137, 1);
+  border-radius: 10px;
+  background-color: white;
+  transition: transform 0.2s;
+}
+
+.achiever:hover {
+  transform: scale(1.05);
+}
+
+.achiever img {
+  width: auto;
+  height: 80%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-left: 2vw;
+}
+
+.description {
+  padding-left: 2vw;
+}
+
+.description h2:nth-child(2) {
+  color: rgba(22, 59, 255, 1);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.description h2:first-child {
+  color: rgba(0, 0, 0, 1);
+}
+
+.description h3 {
+  color: rgba(0, 0, 0, 1);
+  font-weight: 100;
+}
+
+.show-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show {
+  cursor: pointer;
+  font-size: 2rem;
+  color: rgba(95, 94, 94, 1);
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.show img {
+  margin: 0;
+  padding-bottom: 0.5vh;
+}
+
+.show:hover {
+  color: rgba(95, 94, 94, 0.8);
+}
+
+.show:focus {
+  outline: none;
+}
