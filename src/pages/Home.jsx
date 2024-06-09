@@ -5,19 +5,77 @@ import Achievers from '../components/Achievers';
 import Board from '../components/Board';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import SecretaryModal from '../components/SecretaryModal';
 
 const Home = () => {
   const [showMore, setshowMore] = useState(false);
   const noticeBoardRef = useRef(null);
+  const [selectedSecretary, setSelectedSecretary] = useState(null);
 
   const secretaries = [
-    { name: 'Apurv Kshirsagar', position: 'Technical Secretary' },
-    { name: 'Naveen Kumar M', position: 'Hostel Legislature' },
-    { name: 'Yashwardhan', position: 'General Secretary' },
-    { name: 'Mahavir', position: 'Literary Secretary' },
-    { name: 'Srujan', position: 'Social Secretary' },
-    { name: 'Ajay', position: 'Sports Secretary' },
-    { name: 'Sasank', position: 'Health and Hygiene Secretary' },
+    {
+      name: 'Apurv Kshirsagar',
+      position: 'Technical Secretary',
+      imageUrl: 'src/assets/secy.png',
+      quote:
+        'Driving tech excellence and innovation as your Technical Secretary',
+      email: 'ce22b042@smail.iitm.ac.in',
+      Phone: '8180886690',
+    },
+    {
+      name: 'Naveen Kumar M',
+      position: 'Hostel Legislature',
+      imageUrl: 'src/assets/secy.png',
+      quote:
+        'Driving tech excellence and innovation as your Technical Secretary',
+      email: 'ce22b042@smail.iitm.ac.in',
+      Phone: '8180886690',
+    },
+    {
+      name: 'Yashwardhan',
+      position: 'General Secretary',
+      imageUrl: 'src/assets/secy.png',
+      quote:
+        'Driving tech excellence and innovation as your Technical Secretary',
+      email: 'ce22b042@smail.iitm.ac.in',
+      Phone: '8180886690',
+    },
+    {
+      name: 'Mahavir',
+      position: 'Literary Secretary',
+      imageUrl: 'src/assets/secy.png',
+      quote:
+        'Driving tech excellence and innovation as your Technical Secretary',
+      email: 'ce22b042@smail.iitm.ac.in',
+      Phone: '8180886690',
+    },
+    {
+      name: 'Srujan',
+      position: 'Social Secretary',
+      imageUrl: 'src/assets/secy.png',
+      quote:
+        'Driving tech excellence and innovation as your Technical Secretary',
+      email: 'ce22b042@smail.iitm.ac.in',
+      Phone: '8180886690',
+    },
+    {
+      name: 'Ajay',
+      position: 'Sports Secretary',
+      imageUrl: 'src/assets/secy.png',
+      quote:
+        'Driving tech excellence and innovation as your Technical Secretary',
+      email: 'ce22b042@smail.iitm.ac.in',
+      Phone: '8180886690',
+    },
+    {
+      name: 'Sasank',
+      position: 'Health and Hygiene Secretary',
+      imageUrl: 'src/assets/secy.png',
+      quote:
+        'Driving tech excellence and innovation as your Technical Secretary',
+      email: 'ce22b042@smail.iitm.ac.in',
+      Phone: '8180886690',
+    },
   ];
   const achievers = [
     {
@@ -69,7 +127,7 @@ const Home = () => {
       imageUrl: 'src/assets/achiever.png',
     },
   ];
-  ('rgba(206, 10, 112, 1)');
+
   const boards = [
     {
       color1: 'rgba(206, 10, 112, 1)',
@@ -108,6 +166,14 @@ const Home = () => {
     noticeBoardRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleCardClick = (secretary) => {
+    setSelectedSecretary(secretary);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedSecretary(null);
+  };
+
   return (
     <div className='Home'>
       <Navbar />
@@ -140,6 +206,7 @@ const Home = () => {
               key={index}
               name={secretary.name}
               position={secretary.position}
+              onClick={() => handleCardClick(secretary)}
             />
           ))}
         </div>
@@ -166,6 +233,11 @@ const Home = () => {
         </div>
       </div>
       <Footer />
+      <SecretaryModal
+        isOpen={!!selectedSecretary}
+        onClose={handleCloseModal}
+        secretary={selectedSecretary}
+      />
     </div>
   );
 };

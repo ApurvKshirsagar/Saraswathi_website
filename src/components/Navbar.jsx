@@ -7,13 +7,23 @@ const Navbar = () => {
     <div className='navbar'>
       <h2 className='logo'>SARASWATHI</h2>
       <div className='navlinks'>
-        <NavLink exact to='/' activeClassName='active'>
+        <NavLink
+          to='/'
+          className={({ isActive }) => (isActive ? 'active' : '')}
+          end
+        >
           Home
         </NavLink>
-        <NavLink to='/complaint' activeClassName='active'>
+        <NavLink
+          to='/complaint'
+          className={({ isActive }) => (isActive ? 'active' : '')}
+        >
           Complaint
         </NavLink>
-        <NavLink to='/calendar' activeClassName='active'>
+        <NavLink
+          to='/calendar'
+          className={({ isActive }) => (isActive ? 'active' : '')}
+        >
           Calendar
         </NavLink>
       </div>
