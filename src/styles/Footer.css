@@ -8,6 +8,7 @@
   font-family: 'Arial', sans-serif;
   flex-direction: row;
   text-align: center;
+  width: 100vw;
 }
 
 .footer-section {
@@ -35,4 +36,52 @@
 .footer p {
   margin-top: 1rem;
   font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .footer-section:first-child {
+    display: none;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .footer-section {
+    margin-bottom: 1rem;
+  }
+
+  .footer h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer p,
+  .footer a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section:first-child {
+    display: none;
+  }
+
+  .footer h3 {
+    font-size: 1rem;
+  }
+
+  .footer p,
+  .footer a {
+    font-size: 0.8rem;
+  }
+
+  .footer-section {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer {
+    padding: 0.5rem;
+  }
 }

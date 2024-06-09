@@ -67,3 +67,62 @@
 .show:focus {
   outline: none;
 }
+
+@media (max-width: 950px) {
+  .achiever img {
+    height: 20vh;
+    width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .achiever img {
+    height: 15vh;
+    width: auto;
+  }
+
+  .description {
+    height: 20vh;
+  }
+
+  .description h2:nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .description h2:first-child {
+    font-size: 1.2rem;
+  }
+
+  .description h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .achiever img {
+    height: 10vh;
+    width: auto;
+  }
+
+  .description {
+    height: 15vh;
+  }
+
+  .description h2:nth-child(2) {
+    font-size: 0.8rem;
+    margin: 0;
+    padding-bottom: 1vh;
+  }
+
+  .description h2:first-child {
+    font-size: 1rem;
+    margin: 0;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }
+
+  .description h3 {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+}

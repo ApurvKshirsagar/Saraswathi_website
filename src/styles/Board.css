@@ -21,3 +21,19 @@
   color: black;
   text-align: center;
 }
+
+@media (max-width: 700px) {
+  .board {
+    height: 150px;
+  }
+}
+
+@media (max-width: 450px) {
+  .board {
+    height: 150px;
+  }
+
+  .board-content {
+    font-size: 1rem;
+  }
+}

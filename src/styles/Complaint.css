@@ -1,16 +1,16 @@
-
 .complaint-form-page {
   /* display: flex; */
   /* justify-content: center; */
   /* align-items: center; */
   height: auto;
-  background:  #f7ebda;
+  background: #f7ebda;
 }
 
-.complaint-form-wrapper{
+.complaint-form-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding-top: 8vh;
 }
 .complaint-form-container {
   width: 65%;
@@ -42,14 +42,14 @@
   text-align: left;
 }
 
-.name-container{
+.name-container {
   /* width: 70%; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.complaint-form-name-group{
+.complaint-form-name-group {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -57,7 +57,7 @@
   text-align: left;
 }
 
-.complaint-form-name-box{
+.complaint-form-name-box {
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -74,30 +74,30 @@
   color: red;
 }
 
-.roll-phone{
+.roll-phone {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.rollno{
+.rollno {
   width: 45%;
 }
-.phoneno{
+.phoneno {
   width: 45%;
 }
 
 .horizontal-bar {
   /* display: flex; */
-  justify-content: space-between; 
-  margin-bottom: 10px; 
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .horizontal-bar-button {
-  background-color: #ddd; 
+  background-color: #ddd;
   color: #333;
   border: none;
-  padding: 10px 20px; 
+  padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -117,11 +117,11 @@
   box-sizing: border-box;
 }
 
-.name-container-1{
+.name-container-1 {
   width: 45%;
 }
 
-.name-container-2{
+.name-container-2 {
   width: 50%;
 }
 .complaint-form-textarea {
@@ -138,7 +138,7 @@
   padding: 10px;
   border: none;
   border-radius: 20px;
-  background: linear-gradient(to right, #D31C6E, #FAB651);
+  background: linear-gradient(to right, #d31c6e, #fab651);
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -146,6 +146,6 @@
 }
 
 .complaint-form-button:hover {
-  background: linear-gradient(to right, #D31C6E, #FAB651);
+  background: linear-gradient(to right, #d31c6e, #fab651);
   transform: scale(1.05);
 }

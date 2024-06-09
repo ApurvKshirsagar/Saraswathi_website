@@ -1,11 +1,13 @@
-.calendar{
-  background:  #f7ebda;
+.calendar {
+  background: #f7ebda;
   height: 100vh;
   padding: 15px;
 }
-.event-calendar-h1, .event-calendar-h2 {
+.event-calendar-h1,
+.event-calendar-h2 {
   text-align: center;
   margin: 10px;
+  margin-top: 8vh;
 }
 
 .search-bar-container {
@@ -74,4 +76,5 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
+  padding-bottom: 5vh;
 }

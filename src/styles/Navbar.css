@@ -7,10 +7,17 @@
   position: absolute;
   top: 0;
   left: 0;
-  color: white;
   z-index: 100;
   padding: 0 2rem;
   box-sizing: border-box;
+}
+
+.navbar.home {
+  color: white;
+}
+
+.navbar.other {
+  color: black;
 }
 
 .navlinks {
@@ -19,7 +26,6 @@
 }
 
 .navlinks a {
-  color: white;
   font-size: 1rem;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -42,8 +48,19 @@
 .navbar-line {
   width: 100%;
   border: none;
-  border-bottom: 1px solid white;
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.navbar.home .navbar-line {
+  border-bottom: 1px solid white;
+}
+
+.navbar.other .navbar-line {
+  border-bottom: 1px solid black;
+}
+
+.navlinks a {
+  color: inherit;
 }

@@ -1,7 +1,6 @@
-
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../styles/Home.css';
-import Secretary_card from '../components/Secretary_card';
+import SecretaryCard from '../components/SecretaryCard';
 import Achievers from '../components/Achievers';
 import Board from '../components/Board';
 import Navbar from '../components/Navbar';
@@ -12,6 +11,24 @@ const Home = () => {
   const [showMore, setshowMore] = useState(false);
   const noticeBoardRef = useRef(null);
   const [selectedSecretary, setSelectedSecretary] = useState(null);
+  const [maxAchievers, setMaxAchievers] = useState(6);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1050) {
+        setMaxAchievers(4);
+      } else {
+        setMaxAchievers(6);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const secretaries = [
     {
@@ -161,7 +178,9 @@ const Home = () => {
     //   content: 'We won Techsoc',
     // },
   ];
-  const displayedAchievers = showMore ? achievers : achievers.slice(0, 6);
+  const displayedAchievers = showMore
+    ? achievers
+    : achievers.slice(0, maxAchievers);
 
   const handleScrollDown = () => {
     noticeBoardRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -203,7 +222,7 @@ const Home = () => {
         <h1>Meet Our Secretaries</h1>
         <div className='card-container'>
           {secretaries.map((secretary, index) => (
-            <Secretary_card
+            <SecretaryCard
               key={index}
               name={secretary.name}
               position={secretary.position}

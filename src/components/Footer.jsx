@@ -7,7 +7,7 @@ const Footer = () => {
       <div className='footer-section'>
         <h3>Navigate</h3>
         <a href='/'>Home</a>
-        <a href='/complain'>Complain</a>
+        <a href='/complaint'>Complaint</a>
         <a href='/calendar'>Calendar</a>
       </div>
       <div className='footer-section'>

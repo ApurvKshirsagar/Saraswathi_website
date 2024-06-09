@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/Secretary_card.css';
+import '../styles/SecretaryCard.css';
 
-const Secretary_card = ({ name, position, onClick }) => {
+const SecretaryCard = ({ name, position, onClick }) => {
   return (
     <div className='secy' onClick={onClick}>
       <h2>{name}</h2>
@@ -13,4 +13,4 @@ const Secretary_card = ({ name, position, onClick }) => {
   );
 };
 
-export default Secretary_card;
+export default SecretaryCard;

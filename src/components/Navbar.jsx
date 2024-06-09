@@ -1,10 +1,12 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
+  const location = useLocation();
+
   return (
-    <div className='navbar'>
+    <div className={`navbar ${location.pathname === '/' ? 'home' : 'other'}`}>
       <h2 className='logo'>SARASWATHI</h2>
       <div className='navlinks'>
         <NavLink
