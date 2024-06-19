@@ -63,3 +63,52 @@
     margin-top: 10px;
   }
   
+  @media (max-width: 920px){
+    .event-card-date-container{
+      width: 25%;
+    }
+    .event-card-content{
+      width: 75%;
+    }
+  }
+  @media (max-width: 700px){
+    .event-card-date-container{
+      width:32%;
+      border-radius: 5px;
+    }
+
+    .event-card-content{
+      width: 68%;
+    }
+
+    .event-day{
+      font-size: 32px;
+      /* color: white; */
+    }
+
+    .event-card{
+      border-radius: 5px;
+    }
+  }
+
+  @media (max-width: 500px){
+
+    .event-card{
+      border-radius: 5px;
+      flex-direction: column;
+    }
+
+    .event-card-date-container{
+      width:100%;
+      border-radius: 5px;
+    }
+
+    .event-card-content{
+      width: 100%;
+    }
+
+    .event-day{
+      font-size: 25px;
+      /* color: white; */
+    }
+  }
